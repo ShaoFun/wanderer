@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, "微軟正黑體", sans-serif ;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+/* helper-------------------------------------------------------*/
+
+.container {
+    max-width: 1200px; /* 響應式*/
+    box-sizing: border-box;
+    /* padding: 20px; 有加上行才能從頭算,才不會一直要算width像素 */
+}
+
+.container {
+    max-width: 800px; 
+    box-sizing: border-box;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*header-----------------------------------------------------------*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-head, .header-body, .header-foot {
+    padding: .5rem 1rem;
+    box-sizing: border-box;
+}
+
+.header-head {
+    /* background-color: pink; */
+    width: 80px;
+}
+
+.header-body {
+    /* background-color: yellowgreen; */
+}
+
+
+.header-foot {
+    display: none;
+}
+
+.header-btn-xmark {
+    display: none;
+}
+
+.header-ul {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+}
+
+.header-li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.header-link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition-duration: 0.3s;
+}
+
+.header-link:hover {
+    color: #cf7688;
+}
+
+.header-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* banner----------------------------------------------------------*/
+
+.banner {
+    color: #fff;
+    background-image: linear-gradient(135deg, #cf7688 20%, #f5ba54);
+}
+
+.banner-container {
+    display: flex;
+    align-items: center;
+}
+
+.banner-index .banner-head {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.banner-small {
+    display: block;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.banner-subTitle {
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, .7);
+}
+.banner-desc {
+    line-height: 1.6;
+}
+
+.banner-ul {
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 4rem;
+}
+
+.banner-ul-order1 {
+    order: -1;
+}
+
+.banner-li + .banner-li{
+    margin-left: 1rem;
+    position: relative;
+}
+
+.banner-li + .banner-li::before {
+    content: "";
+    position: absolute;
+    top: .4rem;
+    left: -0.6rem;
+    width: 4px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+
+}
