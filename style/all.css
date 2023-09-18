@@ -20,7 +20,7 @@ img {
     /* padding: 20px; 有加上行才能從頭算,才不會一直要算width像素 */
 }
 
-.container {
+.container-md {
     max-width: 800px; 
     box-sizing: border-box;
 }
@@ -36,6 +36,9 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
 }
 
 .header-head, .header-body, .header-foot {
@@ -96,6 +99,8 @@ img {
 .banner {
     color: #fff;
     background-image: linear-gradient(135deg, #cf7688 20%, #f5ba54);
+    clip-path: polygon(0 0, 100% 0, 100% 85% , 0 100%);
+    /* 斜角設計效果:4組 x y 數值 */
 }
 
 .banner-container {
@@ -106,6 +111,22 @@ img {
 .banner-index .banner-head {
     display: flex;
     flex-direction: column;
+    width: 40%;
+    padding-top: 3rem;
+}
+
+.banner-index .banner-body {
+    position: relative;
+    width: 60%;
+    padding-top: 3rem;
+
+}
+
+.banner-head, .banner-body {
+    width: 50%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
 }
 
 .banner-title {
@@ -157,3 +178,47 @@ img {
     background-color: rgba(255, 255, 255, 0.2);
 
 }
+
+.banner-btns {
+    margin-top: 2rem;
+    
+}
+
+.banner-btn {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: solid 2px #fff;
+    padding: 1rem 3rem;
+    display: inline-block;
+    border-radius: 5px;
+    transition-duration: .3s;
+}
+
+.banner-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.banner-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner-img-mobile, .banner-img-pad {
+    position: absolute;
+}
+
+.banner-img-mobile {
+    bottom: 5rem;
+    left: 0;
+}
+
+.banner-img-pad {
+    bottom: -2rem;
+    right: 1rem;
+}
+
+.banner-img-desktop {
+    margin-left: 4.5rem;
+}
+
