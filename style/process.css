@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/* process--------------------------------- */
+
+.process-item {
+    display: flex;
+
+}
+
+.process-head {
+    width: 30%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.process-body {
+    width: 70%;
+    background-color: #fff;
+}
+
+.process-name {
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.process-cht, .process-en {
+    display: block;
+    
+}
+
+.process-cht {
+    font-size: 2.5rem;
+}
+
+.process-en {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+.process-ol {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.process-li {
+    width: 50%;
+    padding: 2rem;
+    box-sizing: border-box;
+}

@@ -5,23 +5,22 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, "微軟正黑體", sans-serif ;
+    font-family: Arial, Helvetica, "微軟正黑體", sans-serif;
 }
 
 img {
     vertical-align: bottom;
 }
 
-/* helper-------------------------------------------------------*/
+/* helper --------------------------------------- */
 
 .container {
-    max-width: 1200px; /* 響應式*/
+    max-width: 1200px;
     box-sizing: border-box;
-    /* padding: 20px; 有加上行才能從頭算,才不會一直要算width像素 */
 }
 
 .container-md {
-    max-width: 800px; 
+    max-width: 800px;
     box-sizing: border-box;
 }
 
@@ -30,7 +29,7 @@ img {
     margin-right: auto;
 }
 
-/*header-----------------------------------------------------------*/
+/* header ------------------------------ */
 
 .header {
     display: flex;
@@ -38,6 +37,7 @@ img {
     align-items: center;
     position: fixed;
     z-index: 10;
+    /* background-color: pink; */
     width: 100%;
 }
 
@@ -55,19 +55,14 @@ img {
     /* background-color: yellowgreen; */
 }
 
-
-.header-foot {
-    display: none;
-}
-
-.header-btn-xmark {
+.header-foot, .header-btn-xmark {
     display: none;
 }
 
 .header-ul {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, .7);
+    padding: .5rem 1rem;
     border-radius: 30px;
 }
 
@@ -81,8 +76,8 @@ img {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 0.9rem;
-    transition-duration: 0.3s;
+    font-size: .9rem;
+    transition-duration: .3s;
 }
 
 .header-link:hover {
@@ -94,13 +89,11 @@ img {
     height: auto;
 }
 
-/* banner----------------------------------------------------------*/
-
+/* banner --------------------------- */
 .banner {
     color: #fff;
-    background-image: linear-gradient(135deg, #cf7688 20%, #f5ba54);
-    clip-path: polygon(0 0, 100% 0, 100% 85% , 0 100%);
-    /* 斜角設計效果:4組 x y 數值 */
+    background-image: linear-gradient(135deg, #cf7688 20%, #f5ba54 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
 .banner-container {
@@ -119,7 +112,6 @@ img {
     position: relative;
     width: 60%;
     padding-top: 3rem;
-
 }
 
 .banner-head, .banner-body {
@@ -135,10 +127,10 @@ img {
 }
 
 .banner-small {
-    display: block;
     text-transform: uppercase;
-    margin-top: 0.5rem;
     font-size: 1.5rem;
+    margin-top: .5rem;
+    display: block;
 }
 
 .banner-subTitle {
@@ -147,23 +139,29 @@ img {
     line-height: 1.5;
     color: rgba(255, 255, 255, .7);
 }
+
 .banner-desc {
     line-height: 1.6;
+}
+
+.banner-desc + .banner-desc {
+    margin-top: 1rem;
+}
+
+.banner-desc-lg {
+    font-size: 1.5rem;
+    line-height: 1.3;
 }
 
 .banner-ul {
     display: flex;
     text-transform: uppercase;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, .3);
     margin-bottom: 4rem;
 }
 
-.banner-ul-order1 {
-    order: -1;
-}
-
-.banner-li + .banner-li{
+.banner-li + .banner-li {
     margin-left: 1rem;
     position: relative;
 }
@@ -172,16 +170,18 @@ img {
     content: "";
     position: absolute;
     top: .4rem;
-    left: -0.6rem;
+    left: -.6rem;
     width: 4px;
     height: 4px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, .3);
+}
 
+.banner-ul-order1 {
+    order: -1;
 }
 
 .banner-btns {
     margin-top: 2rem;
-    
 }
 
 .banner-btn {
@@ -196,12 +196,17 @@ img {
 }
 
 .banner-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, .2);
 }
 
 .banner-img {
     max-width: 100%;
     height: auto;
+}
+
+.banner-img-fit {
+    height: 400px;
+    object-fit: cover;
 }
 
 .banner-img-mobile, .banner-img-pad {
@@ -222,3 +227,84 @@ img {
     margin-left: 4.5rem;
 }
 
+.banner-title-line {
+    position: relative;
+}
+
+.banner-title-line::after {
+    content: "";
+    position: absolute;
+    width: 1.5em;
+    border-top: solid 4px rgba(255, 255, 255, .5);
+    left: 0;
+    bottom: -1rem;
+}
+
+/* footer ---------------------------- */
+
+.footer {
+    background-color: #666;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 7rem 1rem 1rem;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+}
+
+.footer-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-img-logo {
+    max-width: 40px;
+    margin-bottom: .5rem;
+}
+
+.footer-desc {
+    font-size: .9rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer-ul {
+    display: flex;
+}
+
+.footer-li {
+    margin-left: 1rem;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .9rem;
+    transition-duration: .3s;
+}
+
+.footer-link:hover {
+    color: #cf7688;
+}
+
+/* aside ------------------------------------------- */
+
+.aside {
+    position: fixed;
+    right: 1rem;
+    bottom: 15rem;
+}
+
+.aside-link {
+    color: rgba(0, 0, 0, .2);
+    transition-duration: .3s;
+}
+
+.aside-link:hover {
+    color: rgba(0, 0, 0, .5);
+}
+
+.aside-link-top {
+    font-size: 3rem;
+}
