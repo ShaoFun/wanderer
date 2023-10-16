@@ -15,8 +15,10 @@ img {
 /* helper --------------------------------------- */
 
 .container {
-    max-width: 1200px;
+    max-width: 1200px; /* 響應式*/
     box-sizing: border-box;
+    /* padding: 20px; 有加上行才能從頭算,才不會一直要算width像素 */
+
 }
 
 .container-md {
@@ -216,6 +218,7 @@ img {
 .banner-img-mobile {
     bottom: 5rem;
     left: 0;
+    z-index: 1;
 }
 
 .banner-img-pad {
@@ -308,3 +311,151 @@ img {
 .aside-link-top {
     font-size: 3rem;
 }
+
+/* RWD------------------------- */
+
+@media screen and (max-width: 480px) {
+    .header {
+        background-color: rgba(255, 255, 255, .7);    
+    }
+
+    .header-body {
+        display: none;
+    }
+
+    .header-foot {
+        display: block;
+    }
+ 
+    .header-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .header-ul {
+        border-radius: 0;
+        flex-direction: column;
+        background-color: transparent;
+    }
+
+    .header-img-logo {
+        opacity: .5;
+    }
+
+    .header-btn {
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+        padding: 0;
+        display: inline-block;
+    }
+
+    .header-btn-bars {
+        color: rgba(0, 0, 0, .5);
+    }
+
+    .header-btn-xmark {
+        position: absolute;
+        top: .75rem;
+        right: 1.3rem;
+        color: #666;
+    }
+
+    .header-link {
+        font-size: 2rem;
+        text-align: center;
+        display: block;
+        padding: .7rem 1rem;
+    }
+
+    .banner {
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100% );
+    }
+    
+    .banner-container {
+        flex-direction: column;
+    }
+
+    .banner-index .banner-head, .banner-index .banner-body,
+    .banner-head, .banner-body {
+        width: 100%;
+    }
+
+    .banner-index .banner-head, .banner-head {
+        text-align: center;
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+    }
+
+    .banner-body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .banner-index .banner-body {
+        padding-top: 1rem;
+    }
+
+    .banner-img-mobile {
+        width: 40vw;
+        bottom: 2.5rem;
+    }
+
+    .banner-img-desktop {
+        width: 70vw;
+        margin-left: 10vw;
+    }
+
+    .banner-img-pad {
+        width: 60vw;
+    }
+
+    .banner-title {
+        font-size: 7vw;
+    }
+
+    .banner-title-line::after {
+        left: 50%;
+        margin-left: -1.5rem;
+    }
+
+    .banner-small {
+        font-size: 5vw;
+    }
+
+    .banner-ul {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .aside {
+        display: none;
+    }
+
+    .footer {
+        clip-path: none;
+        padding-top: 1rem;
+    }
+
+    .footer-head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-body {
+        display: none;
+    }
+}
+
+
+
